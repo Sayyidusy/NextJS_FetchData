@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 import supabase from '../../utils/supabase'
 
-export default function About() {
+export default function ClientSide() {
     const [data, setData] = useState<any>(null);
     const [loading, setloading] = useState<boolean>(true);
 
@@ -17,7 +17,7 @@ export default function About() {
     },[]);
 
     return loading ? (
-        <p>Loading ...</p>
+        <p>Loading...</p>
     ) : (
         <pre>{JSON.stringify(data, null, 2)}</pre>
     )
